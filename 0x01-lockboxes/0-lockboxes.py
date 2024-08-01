@@ -17,6 +17,3 @@ def canUnlockAll(boxes):
             if len(keys) == boxesNumber:
                 return True
     return False
-
-# boxes = [[0]]
-# print(canUnlockAll(boxes))
