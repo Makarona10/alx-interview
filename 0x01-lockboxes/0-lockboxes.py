@@ -4,6 +4,7 @@
 
 
 def canUnlockAll(boxes):
+    '''Determines if all the boxes can be opened'''
     keys = [0]
     boxesNumber = len(boxes)
     for i in range(boxesNumber):
@@ -13,7 +14,3 @@ def canUnlockAll(boxes):
             if len(keys) == boxesNumber:
                 return True
     return False
-
-boxes = [[1], [2], [3], [4], []]
-
-print(canUnlockAll(boxes))
