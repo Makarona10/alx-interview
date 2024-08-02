@@ -7,8 +7,8 @@ def canUnlockAll(boxes):
     '''Determines if all the boxes can be opened'''
     keys = [0]
     boxesNumber = len(boxes)
-    if boxesNumber == 1:
-        return True
+    if boxesNumber == 0:
+        return False
     for i in range(boxesNumber):
         for key in boxes[i]:
             if key != i and key not in keys:
@@ -17,5 +17,5 @@ def canUnlockAll(boxes):
                 return True
     return False
 
-# boxes = [[1], [2], [3], [4], []]
+# boxes = [[0]]
 # print(canUnlockAll(boxes))
