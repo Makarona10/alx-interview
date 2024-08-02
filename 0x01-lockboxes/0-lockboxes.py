@@ -8,7 +8,7 @@ def canUnlockAll(boxes):
     keys = [0]
     boxesNumber = len(boxes)
     if boxesNumber == 0:
-        return False
+        return True
     for i in range(boxesNumber):
         for key in boxes[i]:
             if key != i and key not in keys:
