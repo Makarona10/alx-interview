@@ -11,7 +11,6 @@ statusDic = {}
 statusCodes = [200, 301, 400, 401, 403, 404, 405, 500]
 while True:
     try:
-        print('Enter a line:')
         line = sys.stdin.readline()
         lines.append(line)
         fileSize += int((line.split(' '))[-1])
