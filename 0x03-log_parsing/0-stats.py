@@ -5,7 +5,6 @@
 import sys
 
 
-
 lines = []
 fileSize = 0
 statusDic = {}
@@ -24,8 +23,8 @@ while True:
                 if (statusDic.get(status)) else 1
             if len(lines) % 10 == 0:
                 print(f'File size: {fileSize}')
-            for k, val in statusDic.items():
-                print(f'{k}: {val}')
+                for k, val in statusDic.items():
+                    print(f'{k}: {val}')
     except KeyboardInterrupt:
         print(f'File size: {fileSize}')
         for k, val in statusDic.items():
