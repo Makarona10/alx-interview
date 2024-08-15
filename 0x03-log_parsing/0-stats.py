@@ -7,24 +7,24 @@ import sys
 
 lines = []
 fileSize = 0
-statusDic = {}
-statusCodes = [200, 301, 400, 401, 403, 404, 405, 500]
+statusCodes = {200: 0, 301: 0, 400: 0, 401: 0, 403: 0, 404: 0, 405: 0, 500: 0}
 while True:
     try:
         line = sys.stdin.readline()
         lines.append(line)
-        fileSize += int((line.split(' '))[-1])
+        fileSize += int(((line.split(' '))[-1]).strip())
         status = int((line.split(' '))[-2])
-        if not isinstance(status, int) or status not in statusCodes:
+        if not isinstance(status, int) or status not in list(statusCodes.keys()):
             pass
         else:
-            statusDic[status] = (statusDic[status] + 1)\
-                if (statusDic.get(status)) else 1
+            statusCodes[status] += 1
             if len(lines) % 10 == 0:
                 print(f'File size: {fileSize}')
-                for k, val in statusDic.items():
-                    print(f'{k}: {val}')
+                for k, val in statusCodes.items():
+                    if val > 0:
+                        print(f'{k}: {val}')
     except KeyboardInterrupt:
         print(f'File size: {fileSize}')
-        for k, val in statusDic.items():
-            print(f'{k}: {val}')
+        for k, val in statusCodes.items():
+            if val > 0:
+                print(f'{k}: {val}')
