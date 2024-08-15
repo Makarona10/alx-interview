@@ -14,9 +14,7 @@ while True:
         lines.append(line)
         fileSize += int(((line.split(' '))[-1]).strip())
         status = int((line.split(' '))[-2])
-        if not isinstance(status, int) or status not in list(statusCodes.keys()):
-            pass
-        else:
+        if isinstance(status, int) or status in list(statusCodes.keys()):
             statusCodes[status] += 1
             if len(lines) % 10 == 0:
                 print(f'File size: {fileSize}')
