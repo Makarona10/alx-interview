@@ -10,7 +10,7 @@ lines = []
 fileSize = 0
 statusCodes = {'200': 0, '301': 0, '400': 0,
                '401': 0, '403': 0, '404': 0, '405': 0, '500': 0}
-print(list(statusCodes.keys()))
+
 try:
     for line in stdin:
         lines.append(line)
