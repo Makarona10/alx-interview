@@ -1,7 +1,9 @@
 #!/usr/bin/python3
+"""0x04. UTF-8 Validation Project."""
 
 
 def validUTF8(data):
+    """Determine if a given data set represents a valid UTF-8 encoding."""
     idx = 0
     while idx < len(data):
         if data[idx] & 192 <= 128:
