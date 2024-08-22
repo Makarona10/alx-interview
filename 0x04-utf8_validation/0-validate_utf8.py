@@ -5,7 +5,14 @@ Defines a UTF-8 Validation function
 
 
 def validUTF8(data):
-    '''determines if a given data set represents a valid UTF-8 encoding'''
+    """
+    UTF-8 Validation
+    Args:
+        data (list[int]): an array of characters represented as 1byte int
+    Returns:
+        (True): if all characters in data are valid UTF-8 code point
+        (False): if one or more characters in data are invalid code point
+    """
 
     idx = 0
     while idx < len(data):
