@@ -6,7 +6,7 @@ def validUTF8(data):
     """Determine if a given data set represents a valid UTF-8 encoding."""
     idx = 0
     while idx < len(data):
-        if data[idx] & 192 <= 128:
+        if data[idx] & 192 < 128:
             idx += 1
             continue
         elif (data[idx] & 224 == 192 and idx+1 < len(data) and
