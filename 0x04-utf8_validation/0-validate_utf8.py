@@ -1,10 +1,8 @@
 #!/usr/bin/python3
 '''0x04. UTF-8 Validation Project'''
 
-from typing import List
 
-
-def validUTF8(data: List[int]) -> bool:
+def validUTF8(data):
     '''determines if a given data set represents a valid UTF-8 encoding'''
 
     idx = 0
