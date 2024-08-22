@@ -14,7 +14,7 @@ def validUTF8(data: List[int]) -> bool:
             idx += 1
             continue
         elif (data[idx] & 224 == 192 and idx+1 < len(data)
-              and data[idx+1] & 1902 == 128):
+              and data[idx+1] & 192 == 128):
             idx += 2
             continue
         elif (data[idx] & 240 == 224 and idx+2 < len(data)
