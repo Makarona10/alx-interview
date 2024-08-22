@@ -1,5 +1,7 @@
 #!/usr/bin/python3
-'''0x04. UTF-8 Validation Project'''
+"""
+Defines a UTF-8 Validation function
+"""
 
 
 def validUTF8(data):
