@@ -3,8 +3,9 @@
 
 
 def rotate(matrix, t):
-    if t == 0: return
-    
+    if t == 0:
+        return
+
     n = len(matrix)
     for x in range(0, int(n / 2)):
 
