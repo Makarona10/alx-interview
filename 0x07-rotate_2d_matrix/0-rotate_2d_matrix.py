@@ -13,3 +13,9 @@ def rotate_2d_matrix(matrix):
             matrix[y][n-1-x] = matrix[n-1-x][n-1-y]
             matrix[n-1-x][n-1-y] = matrix[n-1-y][x]
             matrix[n-1-y][x] = temp
+
+matrix = [[1, 2, 3],
+          [4, 5, 6],
+          [7, 8, 9]]
+rotate_2d_matrix(matrix)
+print(matrix)
