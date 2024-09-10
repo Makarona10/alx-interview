@@ -2,14 +2,14 @@
 """Test 0x07 - Rotate 2D Matrix"""
 
 
-def rotateMatrix(mat):
-    n = len(mat)
+def rotate_2d_matrix(matrix):
+    n = len(matrix)
     for x in range(0, int(n / 2)):
 
         for y in range(x, n-x-1):
 
-            temp = mat[x][y]
-            mat[x][y] = mat[y][n-1-x]
-            mat[y][n-1-x] = mat[n-1-x][n-1-y]
-            mat[n-1-x][n-1-y] = mat[n-1-y][x]
-            mat[n-1-y][x] = temp
+            temp = matrix[x][y]
+            matrix[x][y] = matrix[y][n-1-x]
+            matrix[y][n-1-x] = matrix[n-1-x][n-1-y]
+            matrix[n-1-x][n-1-y] = matrix[n-1-y][x]
+            matrix[n-1-y][x] = temp
