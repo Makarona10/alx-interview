@@ -2,7 +2,9 @@
 """Test 0x07 - Rotate 2D Matrix"""
 
 
-def rotate_2d_matrix(matrix):
+def rotate(matrix, t):
+    if t == 0: return
+    
     n = len(matrix)
     for x in range(0, int(n / 2)):
 
@@ -13,9 +15,8 @@ def rotate_2d_matrix(matrix):
             matrix[y][n-1-x] = matrix[n-1-x][n-1-y]
             matrix[n-1-x][n-1-y] = matrix[n-1-y][x]
             matrix[n-1-y][x] = temp
+    rotate(matrix, t - 1)
 
-matrix = [[1, 2, 3],
-          [4, 5, 6],
-          [7, 8, 9]]
-rotate_2d_matrix(matrix)
-print(matrix)
+
+def rotate_2d_matrix(matrix):
+    rotate(matrix, 3)
