@@ -1,6 +1,11 @@
 #!/usr/bin/python3
+"""
+Defines a make change function
+"""
+
 
 def makeChange(coins, total):
+    """Minium coins required"""
     if total <= 0:
         return 0
 
