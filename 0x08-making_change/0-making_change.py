@@ -8,7 +8,7 @@ def makeChange(coins, total):
     """Minium coins required"""
     if total <= 0:
         return 0
-
+    coins.sort(reverse=True)
     min = -1
     for n in coins:
         sum = n
