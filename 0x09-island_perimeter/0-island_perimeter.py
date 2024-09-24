@@ -2,7 +2,8 @@
 '''0x09. Island Perimeter'''
 
 
-def island_perimeter(grid):
+def island_perimeter(grid) -> int:
+    '''returns the perimeter of the island described in grid'''
     ribs = 0
     for row in range(len(grid)):
         for col in range(len(grid[0])):
