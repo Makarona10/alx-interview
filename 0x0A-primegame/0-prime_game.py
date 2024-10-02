@@ -17,7 +17,7 @@ def get_primes(n):
             for x in range(i * i, n + 1, i):
                 is_prime[x] = False
 
-    return len([i for i in range(n) if is_prime[i]])
+    return len([i for i in range(n + 1) if is_prime[i]])
 
 
 def isWinner(x, nums):
