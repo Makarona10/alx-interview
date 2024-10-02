@@ -16,19 +16,20 @@ def square_root(val):
 
 
 def get_primes(n):
-    """Get the count of prime numbers less than a specific number"""
-    if n <= 2:
-        return 0
+    """Get a list of prime numbers less than or equal to a specific number n"""
+    if n < 2:
+        return []
 
-    is_prime = [True] * n
+    is_prime = [True] * (n + 1)  # Include n
     is_prime[0] = False
     is_prime[1] = False
 
-    for i in range(2, square_root(n)):
+    for i in range(2, int(n ** 0.5) + 1):
         if is_prime[i]:
-            for x in range(i * i, n, i):
+            for x in range(i * i, n + 1, i):  # Ensure multiples of i are marked
                 is_prime[x] = False
 
+    # return [i for i in range(n + 1) if is_prime[i]]
     return len([i for i in range(n) if is_prime[i]])
 
 
@@ -38,7 +39,7 @@ def isWinner(x, nums):
     ben = 0
     winner = None
     for i in range(x):
-        primes = get_primes(nums[i])
+        primes = get_primes(nums[i] + 1)
         if primes % 2 == 0:
             ben += 1
         else:
