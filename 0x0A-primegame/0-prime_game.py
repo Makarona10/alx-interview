@@ -28,6 +28,7 @@ def get_primes(n):
 def isWinner(x, nums):
     maria = 0
     ben = 0
+    winner = None
     for i in range(x):
         primes = get_primes(nums[i])
         if primes % 2 == 0:
@@ -35,4 +36,8 @@ def isWinner(x, nums):
         else:
             maria += 1
 
-    return 'Maria' if maria > ben else 'Ben'
+    if ben > maria:
+        winner = 'Maria'
+    elif maria > ben:
+        winner = 'Ben'
+    return winner
