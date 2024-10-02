@@ -6,7 +6,7 @@
 def get_primes(n):
     """Get a list of prime numbers less than or equal to a specific number n"""
     if n < 2:
-        return []
+        return 0
 
     is_prime = [True] * (n + 1)
     is_prime[0] = False
@@ -26,7 +26,8 @@ def isWinner(x, nums):
     ben = 0
     winner = None
     for i in range(x):
-        primes = get_primes(nums[i] + 1)
+        primes = get_primes(nums[i])
+        print(primes)
         if primes % 2 == 0:
             ben += 1
         else:
