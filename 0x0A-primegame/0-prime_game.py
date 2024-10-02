@@ -1,6 +1,10 @@
 #!/usr/bin/python3
 
+"""0x0A. Prime Game problem"""
+
+
 def square_root(val):
+    """Gets the square root of a number (similar to math.isqrt)"""
     ans = 1
     sqr = 1
     i = 1
@@ -12,6 +16,7 @@ def square_root(val):
 
 
 def get_primes(n):
+    """Get the count of prime numbers less than a specific number"""
     if n <= 2:
         return 0
 
@@ -28,6 +33,7 @@ def get_primes(n):
 
 
 def isWinner(x, nums):
+    """Determines who is the winner of prime game"""
     maria = 0
     ben = 0
     winner = None
