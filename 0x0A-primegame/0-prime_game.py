@@ -45,7 +45,7 @@ def isWinner(x, nums):
             maria += 1
 
     if ben > maria:
-        winner = 'Maria'
-    elif maria > ben:
         winner = 'Ben'
+    elif maria > ben:
+        winner = 'Maria'
     return winner
