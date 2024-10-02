@@ -27,7 +27,6 @@ def isWinner(x, nums):
     winner = None
     for i in range(x):
         primes = get_primes(nums[i])
-        print(primes)
         if primes % 2 == 0:
             ben += 1
         else:
