@@ -1,3 +1,5 @@
+#!/usr/bin/python3
+
 def square_root(val):
     ans = 1
     sqr = 1
